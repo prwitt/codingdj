@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding an User with jQuery</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        function Add() {
+          $("#tableData tbody").append("<tr>" +
+          "<td><input type='text'/></td>" +
+          "<td><input type='text'/></td>" +
+          "<td><input type='email'/></td>" +
+          "<td><input type='tel'/></td>" +
+          "</tr>");
+          $("#btnAdd").bind("click", Add);
+        };
+      });
+    </script>
+  </head>
+
+    <body>
+       <button id="btnAdd"> New </button>
+       <table id=" tblData ">
+       <thead>
+          <tr>
+             <th>Name</th>
+             <th>Phone</th>
+             <th>Email</th>
+             <th>Contact #</th>
+          </tr>
+       </thead>
+       <tbody> </tbody>
+       </table>
+  </body>
+</html>

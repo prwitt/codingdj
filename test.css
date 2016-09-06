@@ -1,0 +1,25 @@
+#box1{
+  width:400px;
+  height:400px;
+  color:blue;
+  display:block;
+  border: 2px solid black;
+}
+#box2{
+  width:120px;
+  height:120px;
+  color:green;
+  display:inline-block;
+  border: 2px solid black;
+  text-align:center;
+  background-color:lightblue;
+}
+#box3{
+  width:120px;
+  height:120px;
+  color:red;
+  display:inline-block;
+  border: 2px solid black;
+  text-align:center;
+  background-color:lightblue;
+}

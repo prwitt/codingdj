@@ -1,0 +1,34 @@
+#effects{
+  height:150px;
+  width:500px;
+  border:1px solid black;
+  margin:10px;
+  padding:5px;
+}
+#CSS{
+  height:150px;
+  width:500px;
+  border: 1px solid orange;
+  display: block;
+  margin:10px;
+  padding:5px;
+}
+#Manipulation{
+  height:150px;
+  width:500px;
+  border: 1px solid green;
+  display: block;
+  margin:10px;
+  padding:5px;
+}
+#Events{
+  height:150px;
+  width:500px;
+  border: 1px solid red;
+  display: block;
+  margin:10px;
+  padding:5px;
+}
+.blue {
+  color:blue;
+}

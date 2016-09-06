@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding an User with jQuery</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	$('input').val("");
+    	$('form').submit(function(){
+        return false;
+    	});
+    });
+    $(document).on('click', 'button.add', function() {
+    	$firstname = $('#firstname').val();
+    	$lastname = $('#lastname').val();
+    	$email = $('#email').val();
+    	$phone = $('#phone').val();
+    	$('table').append("<tr><td>"
+      +$firstname+"</td>"+"<td>"
+      +$lastname+"</td>"+"<td>"
+      +$email+"</td>"+"<td>"
+      +$phone+"</td></tr>");
+    });
+    $(document).on('click', 'button.reset', function() {
+    	$('input').val("");
+    });
+    </script>
+  </head>
+  <body>
+    <div class="divtable">
+        <table style="width:70%">
+            <tr>
+              <th>Firstname</th>
+              <th>Last Name</th>
+              <th>Email Address</th>
+              <th>Contact #</th>
+            </tr>
+        </table>
+    </div>
+    <div class="divform">
+        <h1>Add User</h1>
+        <form>
+          <p>First Name: <input type="text" id="firstname"></p>
+          <p>Last Name: <input type="text" id="lastname"></p>
+          <p>Email Address: <input type="email" id="email"><p>
+          <p>Contact No.: <input type="tel" id="phone"><p>
+          <button type="submit"class="add">Add User</button>
+        </form>
+    </div>
+  </body>
+</html>

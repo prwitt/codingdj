@@ -1,0 +1,101 @@
+
+
+=======
+This first part of the answer file shows the code with the "proper" indentation:
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Basic II
+        </title>
+    </head>
+    <body>
+        <table> 
+            <thead>
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Password
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Brendan
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Stanton
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        brendanrocks@gmail.com
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        FakePassword123 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>
+            Here is a list of my favorite things:
+        </h1>
+        <ul>
+            <li>
+                Food
+            </li>
+            <li>
+                Bandwidth
+            </li>
+            <li>
+                Coffee
+            </li>
+            <li>
+                Beach
+            </li>
+        </ul>
+    </body>
+</html>
+
+
+
+=======
+This second part describes the PCS relationship among them:
+
+
+- <html> is the root element
+- <html> has no parents
+- <html> is the parent of <head> and <body>
+- <head> is the first child of <html>
+- <body> is the last child of <html>
+- <head> has one child: <title>
+    - <title> has one child (text): "Basic II"
+- <body> has three children: <table>, <h1> and <ul>
+    - <table> has two children: <thead> and <tbody>
+        - <thead> has one child: <tr>
+            - <tr> has four children: <th> times four
+            - each <th> has one conrresponding child (text): "First Name", "Last Name", "Email", "Password"
+        - <tbody> has four children: <tr> times four
+            - each <tr> has a single child: <td>
+            - each <td> has one corresponding child (text): "Brendan", "Stanton", "brendanrocks@gmail.com", "FakePassword123"
+        - <thead> and <tbody> are siblings
+    - <h1> has one child (text): "Here is a list of my favorite things:"
+    - <ul> has four children: <li> times four
+        - each <li> has one corresponding child (text): "Food", "Bandwidth", "Coffee", "Beach"
+    - <table>, <h1> and <ul> are siblings
+- <head> and <body> are siblings

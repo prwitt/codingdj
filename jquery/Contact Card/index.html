@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adding an User with jQuery</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	$('input').val("");
+    	$('form').submit(function(){
+        return false;
+    	});
+    });
+    $(document).on('click', 'button.add', function() {
+    	$firstname = $('#firstname').val();
+    	$lastname = $('#lastname').val();
+      $("#cards").append("<p id='descriptionfield'>"+$firstname+" "+$lastname+"</p>"
+      +"<p id='descriptionfield'> Click for description!</p>"
+    );
+    });
+    $(document).on('click', 'p#descriptionfield', function() {
+    	$description = $('#description').val();
+      $("#cards").replaceWith("<p>"+$description+"</p>");
+    });
+    </script>
+  </head>
+  <body>
+    <div class="divform">
+        <form>
+          <p>First Name: <input type="text" id="firstname"></p>
+          <p>Last Name: <input type="text" id="lastname"></p>
+          <p>Description: <textarea type="text" id="description" cols="50" rows="4"></textarea><p>
+          <button type="submit"class="add">Add User</button>
+        </form>
+    </div>
+    <div id="cards">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Functions</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#show').click(function(){
+          $('.p1').show(1000);
+        });
+        $('#hide').click(function(){
+          $('.p1').hide(1000);
+        });
+        $('#toggle').click(function(){
+          $('.p1').toggle(1000);
+        });
+        $('#slidedown').click(function(){
+          $('.p1').slideDown();
+        });
+        $('#slideToggle').click(function(){
+          $('.p1').slideToggle(1000);
+        });
+        $('#slideUp').click(function(){
+          $('.p1').slideUp(5000);
+        });
+        $('#fadeOut').click(function(){
+          $('.p1').fadeOut(5000);
+        });
+        $('#fadeIn').click(function(){
+          $('.p1').fadeIn(5000);
+        });
+        $('#addclass').click(function(){
+          $('.p2').addClass("blue");
+        });
+        $('#removeclass').click(function(){
+          $('.p2').removeClass("blue");
+        });
+        $('#CSSx').click(function(){
+          $('.p2').css("background-color","yellow");
+        });
+        $('#after').click(function(){
+          $('.p3').after("<p>this is after text</p>");
+        });
+        $('#append').click(function(){
+          $('.p3').append("<p>appended text</p>");
+        });
+        $('#attribute').click(function(){
+          $('.p3').attr("align","center");
+        });
+        $('#before').click(function(){
+          $('.p3').before("<p>this is before text");
+        });
+        $('#html').click(function(){
+          $('.p3').html("This is html text");
+        });
+        $('#reload').click(function(){
+          location.reload();
+        });
+        $('#text').click(function(){
+          $('.p3').text("text test");
+        });
+        $('#val').click(function(){
+          $('input:text').val("this was set by val");
+        });
+        $('#click').click("click",function(){
+            alert("the paragraph was clicked.");
+        });
+        $('#on').on("click",function(){
+            alert("test of on module!");
+        });
+        $('#hover').hover(function(){
+            alert("the paragraph was hovered.");
+        });
+      });
+</script>
+  </head>
+  <body>
+    <div id="effects">
+      <button id="hide" type="button" name="button">Hide</button>
+      <button id="show" type="button" name="button">Show</button>
+      <button id="toggle" type="button" name="button">Toggle</button>
+      <button id="slidedown" type="button" name="button">SlideDown</button>
+      <button id="slideToggle" type="button" name="button">slideToggle</button>
+      <button id="slideUp" type="button" name="button">slideUp</button>
+      <button id="fadeOut" type="button" name="button">fadeOut</button>
+      <button id="fadeIn" type="button" name="button">fadeIn</button>
+      <p class="p1">this is a test of jQuery capabilities. I was told it helps to create a dynamic website, so, lets try it!</p>
+    </div>
+    <div id="CSS">
+      <button id="addclass" type="button" name="button">addClass</button>
+      <button id="removeclass" type="button" name="button">removeClass</button>
+      <button id="CSSx" type="button" name="button">CSS</button>
+      <p class="p2">this is the CSS test</p>
+    </div>
+    <div id="Manipulation">
+      <button id="after" type="button" name="button">after</button>
+      <button id="append" type="button" name="button">append</button>
+      <button id="attribute" type="button" name="button">attr</button>
+      <button id="before" type="button" name="button">before</button>
+      <button id="html" type="button" name="button">html</button>
+      <button id="reset" type="button" name="button">reset</button>
+      <button id="text" type="button" name="button">text</button>
+      <button id="val" type="button" name="button">val</button>
+      <p class="p3">this is the Manipulatin test: <input type="text" name"user"></p>
+    </div>
+    <div id="Events">
+      <p class="p4" id="click">this is the Events test - click</p>
+      <p class="p4" id="on">this is the Events test - on</p>
+      <p class="p4" id="hover">this is the Events test - hover</p>
+    </div>
+  </body>
+</html>

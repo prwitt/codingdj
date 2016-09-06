@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TITLE</title>
+     <meta name="description" content="DESCRIPTION">
+    <link rel="stylesheet" href="PATH">
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+     <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+     <script type="text/javascript">
+        $('a').click(function() {
+          /* Act on the event */
+          alert('you are leaving the page!');
+        });
+      </script>
+ </head>
+
+ <body>
+
+ </body>
+
+ </html>

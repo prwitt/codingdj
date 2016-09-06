@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JQuery Assignment</title>
+    <link rel="stylesheet" href="style-jquery.css" charset="utf-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#click").click("click", function() {
+                alert("thanks for clicking");
+            });
+            $("input").focus(function() {
+                $("input:password").next("span").css("display", "inline").fadeOut(1000);
+            });
+            $("#addclass").click(function() {
+                $("#addClass").addClass("red");
+            });
+            $("#val").click(function() {
+                $("input:text").val("this was set by val");
+            });
+            $("#text").click(function() {
+                $("#textline").text("After Change");
+            });
+            $("#attribute").click(function() {
+                $("#attr").attr("align", "center");
+            });
+            $("#html").click(function() {
+                $("#html").html("This is the result of the html function");
+            });
+            $("#btn1").click(function() {
+                $("div").data("greeting", "Testing data method!");
+            });
+            $("#btn2").click(function() {
+                alert($("div").data("greeting"));
+            });
+            $("#btn3").click(function() {
+                $("div").data("greeting", "undefined");
+            });
+            $("#before").click(function() {
+                $("#beforetext").before("<p>this text was added using before method</p>");
+            });
+            $("#after").click(function() {
+                $("#aftertext").after("<p>this text was added usig after method</p>");
+            });
+            $("#append").click(function() {
+                $("#appendtext").append(" this text was added usig appended method");
+            });
+            $("#show").click(function() {
+                $("#showtext").show(1000);
+            });
+            $("#hide").click(function() {
+                $("#showtext").hide(1000);
+            });
+            $("#toggle").click(function() {
+                $("#toggletext").toggle(1000);
+            });
+            $("#fadeout").click(function() {
+                $('#fadetext').fadeOut(4000);
+            });
+            $("#fadein").click(function() {
+                $("#fadetext").fadeIn(4000);
+            });
+            $("#slideup").click(function() {
+                $("#slidetext").slideUp(1000);
+            });
+            $("#slidedown").click(function() {
+                $("#slidetext").slideDown(1000);
+            });
+            $("#slidetoggle").click(function() {
+                $("#slidetext").slideToggle(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p></p>
+    <h1>.click()</h1>
+    <button id="click" type="button" name="button">click here</button>
+    <p>Click the button to see the message</p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.focus()</h1>
+    <p id="focus">Click on the input field for trying focus</p>
+    <p>
+        <input type="password"> <span>testing focus</span>
+    </p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.addClass()</h1>
+    <button id="addclass" type="button" name="button">addClass</button>
+    <p id="addClass">Click the button to addClass</p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.val()</h1>
+    <button id="val" type="button" name="button">val</button>
+    <p>Click the button to see the result
+        <input type="text" name="user">
+    </p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.text()</h1>
+    <button id="text" type="button" name="button">Change Text</button>
+    <p id="textline">Click the button to change the text to "After Change"</p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.attr()</h1>
+    <button id="attribute" type="button" name="button">attr</button>
+    <p id="attr">Click the button to see the result!</p>
+    <div class='line-separator'></div>
+    <p></p>
+    <h1>.html()</h1>
+    <p id="html">Click here to see the result!</p>
+    <div class='line-separator'></div>
+    <h1>.data()</h1>
+    <button id="btn1">Attach data to div element</button>
+    <button id="btn3">Remove data from div element</button>
+    <br>
+    <button id="btn2">Get data attached to div element</button>
+    <div class='line-separator'></div>
+    <h1>.before()</h1>
+    <button id="before" type="button" name="button">before</button>
+    <p id="beforetext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.after()</h1>
+    <button id="after" type="button" name="button">after</button>
+    <p id="aftertext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.append()</h1>
+    <button id="append" type="button" name="button">append</button>
+    <p id="appendtext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.show() and .hide()</h1>
+    <button id="show" type="button" name="button">show</button>
+    <button id="hide" type="button" name="button">hide</button>
+    <p id="showtext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.toggle()</h1>
+    <button id="toggle" type="button" name="button">toggle</button>
+    <p id="toggletext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.fadeout() and .fadein()</h1>
+    <button id="fadeout" type="button" name="button">fadeout</button>
+    <button id="fadein" type="button" name="button">fadein</button>
+    <p id="fadetext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+    <h1>.slideUp(), .slideDown() and .slideToggle()</h1>
+    <button id="slidedown" type="button" name="button">slidedown</button>
+    <button id="slideup" type="button" name="button">slideup</button>
+    <button id="slidetoggle" type="button" name="button">slidetoggle</button>
+    <p id="slidetext">Click the button to see the result</p>
+    <div class='line-separator'></div>
+</body>
+
+</html>
